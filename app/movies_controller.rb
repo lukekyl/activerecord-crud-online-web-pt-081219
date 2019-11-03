@@ -28,6 +28,7 @@ def can_be_created_in_a_block(args = nil)
   # title == "Home Alone"
   # release_date == 1990
   if args = nil
+    args = {}
     args[:title] = "Home Alone"
     args[:release_date] = 1990
   end
