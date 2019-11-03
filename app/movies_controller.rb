@@ -35,11 +35,12 @@ def can_be_created_in_a_block(args = nil)
     args
   end
 
-  Movie.create do |m|
+  movie = Movie.create do |m|
     args.each do |property, value|
       m.send("#{property}=", value)
     end
   end
+  movie
 end
 
 def can_get_the_first_item_in_the_database
